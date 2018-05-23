@@ -1,0 +1,128 @@
+  body 
+  {
+	   background-image: url("bg.jpg");
+  background-size: cover;
+	  
+  }
+  
+  
+  
+  
+      ul.isometric_home {
+	position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+	width: 600px;
+	transform: rotateX(60deg) rotateZ(-50deg);
+	transform-style: preserve-3d;
+}
+
+ul.isometric_home li {
+	width: 600px;
+	list-style-type: none;
+  /*Hide the lighting gradient from the front face*/
+	background-size: 0, cover;
+	transform-style: preserve-3d;
+}
+
+ul.isometric_home li.mockup_footer {
+	height:160px;
+	background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("");
+}
+
+ul.isometric_home li.mockup_body {
+	height: 470px;
+	transform: translateZ(50px);
+	background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("");
+}
+
+ul.isometric_home li.mockup_header {
+	height: 230px;
+	transform: translateZ(100px);
+	background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("");
+}
+
+ul.isometric_home li.mockup_navigation {
+	height: 40px;
+	transform: translateZ(150px);
+	background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("");
+}
+
+ul.isometric_home li.mockup_button {
+	width: 114px;
+	height: 30px;
+	transform: translateY(200px) translateX(245px) translateZ(150px);
+	background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("");
+}
+
+/*Left and Bottom Sides*/
+ul.isometric_home li:before, .isometric_home li:after {
+	content: '';
+	position: absolute;
+	/*100% height and width*/
+	top: 0; left: 0; right: 0; bottom: 0;
+	background: inherit;
+	background-size: cover;
+}
+
+/*Left Side*/
+ul.isometric_home li:before {
+	transform-origin: left center;
+	transform: rotateY(90deg);
+	/*Reducing the width of the left side for a flat feel*/
+	width: 5px;
+}
+
+/*Bottom Side*/
+ul.isometric_home li:after {
+	transform-origin: bottom center;
+	transform: rotateX(90deg);
+	/*Reducing the height*/
+	height: 5px; top: auto; bottom: 0;
+	/*Background fix - start the background from the bottom*/
+	background-position: bottom center;
+}
+
+
+
+ul.isometric_home span {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	right: 30px;
+	bottom: 30px;
+}
+
+.shadow_footer {
+	transform: translateZ(-50px);
+	background: rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.5);
+}
+
+.shadow_body {
+	transform: translateZ(-100px);
+	background: rgba(0, 0, 0, 0.4);
+	box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.4);
+}
+
+.shadow_header {
+	transform: translateZ(-150px);
+	background: rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.shadow_navigation {
+	transform: translateZ(-200px);
+	background: rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.2);
+}
+
+.shadow_button {
+	transform: translateZ(-49px);
+	background: rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.5);
+}
+    
